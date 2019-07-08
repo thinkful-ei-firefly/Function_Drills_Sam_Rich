@@ -8,6 +8,9 @@ function yearOfBirth(age) {
 }
 
 function createGreeting(name, age) {
+  if (typeof age !== 'number' || typeof name !== 'string') {
+    throw new Error('Arguments not valid');
+  }
   return `Hi my name is ${name} and I'm ${age} years old. I was born ${yearOfBirth(age)}.`;
 }
 
